@@ -1,0 +1,7 @@
+# Secretos y archivos locales
+recursos/cookies_jar.txt
+recursos/actualizacion.log
+recursos/*.tmp
+recursos/videos_info.respaldo.json
+recursos/debug_*.html
+prueba.php

@@ -1,0 +1,16 @@
+Options -Indexes
+DirectorySlash Off
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^(recursos|base_datos|nucleo|acceso|inicio|tiktok|pruebas)/ - [F,L]
+
+    RewriteRule ^(?!index\.php$).*\.php$ - [F,L]
+    RewriteRule ^(configuracion.*|README\.md|\.htaccess)$ - [F,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?ruta=$1 [QSA,L]
+</IfModule>
